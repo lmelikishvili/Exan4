@@ -24,5 +24,4 @@ class MessageFragment : BaseFragment<FragmentMessageBinding>(FragmentMessageBind
 
     }
 
-
 }

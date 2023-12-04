@@ -5,6 +5,13 @@ data class Message(
     val owner: String,
     val lastMessage: String,
     val lastActive: String,
+    val unreadMessages: Int,
     val isTyping: Boolean,
-    val lastMessageType: String,
-)
+    val lastMessageType: LastMessageType
+){
+    enum class LastMessageType{
+        TEXT,
+        VOICE,
+        FILE
+    }
+}

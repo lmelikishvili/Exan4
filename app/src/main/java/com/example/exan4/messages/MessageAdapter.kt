@@ -30,6 +30,10 @@ class MessageAdapter: ListAdapter<Message, MessageAdapter.MessageVH>(MessageDiff
     inner class MessageVH(private val binding: MessageItemBinding): RecyclerView.ViewHolder(binding.root){
 
         fun bind(){
+            val message = currentList[adapterPosition]
+            with(binding){
+
+            }
 
         }
 
