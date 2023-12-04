@@ -17,7 +17,6 @@ class MessageAdapter: ListAdapter<Message, MessageAdapter.MessageVH>(MessageDiff
         override fun areContentsTheSame(oldItem: Message, newItem: Message): Boolean {
             return oldItem == newItem
         }
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = MessageVH(MessageItemBinding.inflate(
@@ -32,7 +31,10 @@ class MessageAdapter: ListAdapter<Message, MessageAdapter.MessageVH>(MessageDiff
         fun bind(){
             val message = currentList[adapterPosition]
             with(binding){
-
+                tvUserName.text = message.owner
+                tvMessage.text= message.lastMessage
+                tvTime.text = message.lastActive
+                tvUnreads.text = message.unreadMessages.toString()
             }
 
         }
